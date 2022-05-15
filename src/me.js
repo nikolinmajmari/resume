@@ -1,4 +1,7 @@
-const app = new App({
+/// init 
+
+
+const myApp = app({
     rootSelector:"main",
     aside:{
         profile:{
@@ -9,7 +12,7 @@ const app = new App({
                 {href:"#",icon:"W","label":"Website"},
                 {href:"#",icon:"G","label":"Github"},
             ],
-            image:"",
+            image:"https://illumesense.com/resources/illumesense/style/img/website/profile-picture-blanks/male-profile.jpg",
             name:"FirstName LastName",
             profession:"Profession Name Here"
         },
@@ -170,5 +173,4 @@ const app = new App({
         },
     ]
 });
-console.log(app);
-app.init();
+myApp.init();

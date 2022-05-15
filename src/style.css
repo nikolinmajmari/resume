@@ -10,8 +10,7 @@ body {
 }
 
 .main {
-    padding: 16px;
-    background-color: whitesmoke;
+    display: -webkit-box;
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -77,14 +76,38 @@ body {
     padding: 24px;
 }
 
+.px-1 {
+    padding-left: 2px!important;
+    padding-right: 2px!important;
+}
+
+.px-2 {
+    padding: 0 4px;
+}
+
+.px-3 {
+    padding: 0 8px;
+}
+
+.px-4 {
+    padding: 0 16px;
+}
+
+.px-5 {
+    padding: 0 24px;
+}
+
 
 /** Aside css **/
 
 .aside {
-    width: 360px;
+    width: 320px;
+    display: -webkit-box;
     display: flex;
-    align-items: stretch;
+    -webkit-box-orient: vertical;
     flex-direction: column;
+    align-items: stretch;
+    -webkit-box-align: stretch;
     color: white;
     border-radius: 8px 0px 0px 8px;
     background-color: rgb(0, 44, 111);
@@ -100,28 +123,38 @@ body {
 .aside .profile {
     background-color: rgba(2, 1, 82, 0.72);
     align-items: stretch;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    -webkit-box-align: center;
     padding: 16px;
 }
 
 .profile .profile-info {
-    align-items: center;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-orient: vertical;
     flex-direction: column;
+    align-items: center;
+    -webkit-box-align: center;
 }
 
 .profile .profile-img {
-    width: 180px;
-    height: 180px;
-    align-self: center;
-    margin: 20px;
-    background-color: whitesmoke;
-    border-radius: 128px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-align: center;
 }
 
 .profile img {
     object-fit: cover;
+    width: 180px;
+    height: 180px;
+    margin: 20px;
+    background-color: whitesmoke;
+    border-radius: 128px;
 }
 
 .profile .profile-contact {
@@ -179,30 +212,34 @@ body {
 
 .skill {
     padding: 4px 0px 2px 0px;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
 }
 
-.skill label.skill-name {
+.skill .skill-name {
     font-size: 14px;
-    flex: 2;
+    width: 60px;
 }
 
-.skill label.skill-bar {
+.skill .skill-bar {
     border-radius: 8px;
     margin-left: 32px;
-    flex: 5;
     height: 16px;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
-    padding: 0px;
-    background-color: rgba(245, 245, 245, 0.645);
     flex-direction: row;
-    align-items: flex-start;
+    padding: 0px;
+    -webkit-box-flex: 5;
+    flex: 5;
+    background-color: rgba(245, 245, 245, 0.645);
 }
 
-.skill label.skill-bar label {
+.skill .skill-bar label {
     padding: 0px!important;
     margin: 0px!important;
 }
@@ -210,6 +247,7 @@ body {
 .skill-bar-1 {
     height: 100%;
     width: 20%;
+    display: inline;
     border-radius: 8px;
     background-color: orange;
 }
@@ -246,6 +284,9 @@ body {
 /*** body css ***/
 
 .body {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-flex: 1;
     display: flex;
     flex: 1;
     flex-direction: column;
